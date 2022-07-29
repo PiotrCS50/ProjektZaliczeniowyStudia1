@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3074089C-B86B-4FC0-9E91-174E110ED0D6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ProjektKoncowy</RootNamespace>
+    <AssemblyName>ProjektKoncowy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BazaBohaterow.cs" />
+    <Compile Include="BazaBroni.cs" />
+    <Compile Include="BazaPrzeciwnikow.cs" />
+    <Compile Include="Bohater.cs" />
+    <Compile Include="Bron.cs" />
+    <Compile Include="Gra.cs" />
+    <Compile Include="Luk.cs" />
+    <Compile Include="LukPrzeciwnika.cs" />
+    <Compile Include="MenuBohaterow.cs" />
+    <Compile Include="MenuBroni.cs" />
+    <Compile Include="MenuGry.cs" />
+    <Compile Include="Miecz.cs" />
+    <Compile Include="Osoba.cs" />
+    <Compile Include="Piesc.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Przeciwnik.cs" />
+    <Compile Include="Przygoda.cs" />
+    <Compile Include="Ramka.cs" />
+    <Compile Include="Sklep.cs" />
+    <Compile Include="Topor.cs" />
+    <Compile Include="WczytywanieDanych.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Czcionka\Czcionka.csproj">
+      <Project>{a9ca16a2-dd74-4b72-9bb8-d8f6a7820bde}</Project>
+      <Name>Czcionka</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuiMenu\GuiMenu.csproj">
+      <Project>{ee593f67-f9f0-4808-94b5-f7fe157725c0}</Project>
+      <Name>GuiMenu</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
